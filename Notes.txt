@@ -49,7 +49,7 @@
     Accessing these resources from parent directories is a matter of pointing in the 
         correct direction, "../" accomplishes this.
         <img src="../images/dog.jpg" alt="Pug wearing a scarf">
-    
+    *Images used for web purposes are primarily one of four types: JPG, GIF, PNG, or SVG*
 
 
 [CSS CASCADING STYLE SHEETS]
