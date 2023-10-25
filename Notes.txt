@@ -1,0 +1,56 @@
+[HTML, HYPERTEXT MARKUP LANGUAGE] 
+    Determines the structure of documents and webpages; the bones of
+    the website.
+    Semantic HTML - using tags in their appropriate places/contexts
+
+
+[HTML DOCUMENT BOILERPLATE]
+    *Within index.HTML*
+    Doctype - tells server what version of HTML (standard shown is HTML5) 
+        <!DOCTYPE html>    
+    Root element - all other elements descend from this <html lang="en"> </html>
+    Head element - container for meta-information <head> </head>
+    Charset encoding - allows server to display characters <meta charset="utf-8">
+    Webpage title element - <title> </title>
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>My First Webpage</title>
+        </head>
+        <body>
+            *elements intended for display here*
+        </body>
+    </html>
+
+
+[LINKING RESOURCES]
+    Anchor element - links to other resources using href attribute (hypertext reference)
+        *defaults to opening resource in same tab
+        *target attribute handles where the resource opens Ex. target="_blank" (new tab)
+        *relation attribute handles the relation between the current page and linked 
+            resource Ex. rel="noopener noreferrer" (no access to page and no knowledge of 
+            which page opened it, good security measure against phishing)
+        <a href="https://www.theodinproject.com" target="_blank" rel="noopener 
+            noreferrer">click me</a>
+    Absolute Link - directs user to a different website; contains "protocol://domain/path"
+        <a href="https://www.theodinproject.com/about">click me</a>
+    Relative Links - directs user to a new page within site; does not contain domain
+    	<a href="./pages/about.html">About</a>
+        *Good practice to not crowd index.html at root, create directory for further pages*
+
+    Image element - links to images using src (source) attribute; can be local or external
+        *Img element should include an alt (alternative text) attribute which acts as a
+            placeholder for the image when not visible and provides a description such that
+            screenreaders for the blind can announce it*
+        <img src="https://www.theodinproject.com/mstile-310x310.png" alt="Odin Project Logo">
+        <img src="./images/dog.jpg" alt="Pug wearing a scarf">
+    Accessing these resources from parent directories is a matter of pointing in the 
+        correct direction, "../" accomplishes this.
+        <img src="../images/dog.jpg" alt="Pug wearing a scarf">
+    
+
+
+[CSS CASCADING STYLE SHEETS]
+    Styles the HTML element bones for display
