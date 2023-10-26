@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+    background: lightblue;
+}
+
+h2 {
+    text-align: center;
+    background: lightgreen;
+}
+
+.pagesNav {
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+}
+
