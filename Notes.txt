@@ -53,4 +53,50 @@
 
 
 [CSS CASCADING STYLE SHEETS]
-    Styles the HTML element bones for display
+    Styles the HTML bones for display using selectors.
+    External CSS Link - file "styles.css" within root directory, then within index.js head:
+        <head>
+           <link rel="stylesheet" href="styles.css" />
+        </head>
+    Internal CSS - within index.js head, use opening/closing "style" elements with CSS inside
+        <head>
+            <style>.a{color:pink;}</style>
+        </head>
+    Inline CSS - written directly within html elements
+        <div style="color: white;">...</div>
+
+    Universal Selector (*) - selects all html elements within body
+    Type Selector - called using the html element name, will select all of that type
+    Class Selector (.) - selects all elements given the correspondent class within the 
+        element's attributes
+    ID Selector (#) - selects the single element given the correspondent id within the
+        element's attributes
+    *When selectors share several common values we can give those values to a shared CSS
+        declaration with a comma separating the selector names. Thus, we cut down repetition
+    *Good practice to use camel-case or a dash to handle multi-word selector names
+
+    Ex. Chaining Selection same initial "a" class but select second "b" class:
+        CSS:    a.b{
+                    color: pink;
+                }   
+        HTML:   <div>
+                    <div class="a b"></div>
+                    <div class="a c"></div>
+                </div>
+    Ex. Chaining Selection same initial "a" class but select second "b" ID:
+        CSS:    a#b{
+                    color: pink;
+                }
+
+    Descendant Combinator - this will only select items of the second class for which
+        the first class is an ancestor (parent, grandparent, etc) of the second.
+        Ex. .ancestor .contents{color:pink;}        will only select "contents" for those
+            descendants of "ancestor" class
+        *Can string multiple descendant classes of ancestral first 
+
+    Specificity - CSS declarations that are more specific take precedence over less 
+        specific; inline css being the most specific
+    Inheritance - certain CSS properties pass from parents down through their descendants,
+        especially typographical properties.
+    *Under tie-breaking conditions, there is the Rule Order, that "last defined" properties
+        become final to break tie conflict
