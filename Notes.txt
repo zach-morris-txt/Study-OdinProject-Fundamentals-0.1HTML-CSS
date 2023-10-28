@@ -100,3 +100,37 @@
         especially typographical properties.
     *Under tie-breaking conditions, there is the Rule Order, that "last defined" properties
         become final to break tie conflict
+
+    CSS Box Model - all html elements are rectangles on the page, position is determined by 
+        padding, margin, and borders
+    Block Elements -elements stack on each other, each on a new line 
+    Inline Elements - elements stack next to each other, on the same line
+    Div - default block-line element, often used as a container
+    Span - default inline element, typically used to group text or when no other html is
+        semantically correct
+    Inline-block vs inline - height and width to replace floater property
+
+
+[CSS FLEXBOX]
+    Flexbox Model - current default tool for positioning elements on a page. Default 
+        along the main axis (horizontal)
+    Assuming "container" element with children elements 
+        .container{
+            display: flex;
+            flex-direction: *row or column*
+            justify-content: *determines spacing on main axis*
+            align-items: *determines spacing on cross-axis*
+            flex-wrap: *wrap such that the items won't squeeze together*
+            align-content: *only with wrapping property, handles cross-axis*
+            gap: *produces gap between elements*
+        }
+        .child-1{
+            flex-grow: *growth proportionally, if there is space to do so*
+            flex-shrink: *shrink proportionally, an item w/ 0 will refuse to shrink*
+            flex-basis: *overwrites pre-declared sizing*
+            flex: *shorthand of grow, shrink, and basis. Be clear to set static values to 0*
+            align-self: *overwrites align-item parent property for self*
+            order: *can overwrite html default positioning*
+        }
+
+    
